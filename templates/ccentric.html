@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ imei }} Ccentric Samsung</title>
+    <link href="{{ url_for('static',filename='styles/style.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>{{ imei }} Ccentric Samsung</h1>
+    <p>Result is: <span class="red-text">{{ result }}</span></p>
+    <br>
+    <p2>Legend</p2>
+    <p3>If result is 97-XXXXXXXXX : this is the code to use </p3>
+    <p3>If result is 'Not found' : there is no code </p3>
+    <p3>If result is 97-XXXXXXXXX-SKIP , use : 97-XXXXXXXXX-SK </p3>
+    <p3>If result is ['Invalid IMEI number.'] , recheck the IMEI </p3>
+    <p3>If result is 'The signatures do not match' , a space has been left while entering the IMEI </p3>
+    <form action="/ccentric" method="get">
+        <input type="text" name="imei" id="imei" placeholder="Enter an IMEI" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
