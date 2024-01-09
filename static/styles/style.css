@@ -26,3 +26,9 @@ button {
 .red-text {
   color: red;
 }
+
+.btn-custom {
+  background-color: #28a745; /* Green color code */
+  color: #fff; /* Text color */
+  /* Add any additional styles as needed */
+}
